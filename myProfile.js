@@ -21,6 +21,7 @@ const test = "select B.account_profile, B.account_nickname, C.walkway_name, D.ac
 
 connection.connect(function(err) {
   if (err) throw err;
+  else console.log("connection success");
   connection.query(test, function (err, result, fields) {
     if (err) throw err;
     console.log(result);
